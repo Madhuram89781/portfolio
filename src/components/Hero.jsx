@@ -1,16 +1,15 @@
 import { useEffect, useRef, useState } from 'react'
 
 const phrases = [
-    '🤖 AI & ML Enthusiast',
-    '📊 Data Science Explorer',
-    '💻 Problem Solver',
-    '🌟 Tech Innovator',
-    '🐍 Python Developer'
+    'Problem Solver',
+    'AI & ML Enthusiast',
+    'Data Science Explorer',
+    'Tech Innovator',
+    'Python Developer'
 ]
 
 export default function Hero() {
     const [displayText, setDisplayText] = useState('')
-    const heroRef = useRef(null)
     const phraseIndexRef = useRef(0)
     const charIndexRef = useRef(0)
     const isDeletingRef = useRef(false)
@@ -48,33 +47,41 @@ export default function Hero() {
         return () => clearTimeout(timeout)
     }, [])
 
-    // Parallax effect
-    useEffect(() => {
-        const handleScroll = () => {
-            const scrolled = window.pageYOffset
-            if (heroRef.current) {
-                heroRef.current.style.transform = `translateY(${scrolled * 0.5}px)`
-                heroRef.current.style.opacity = Math.max(0, 1 - scrolled / 700)
-            }
-        }
-        window.addEventListener('scroll', handleScroll)
-        return () => window.removeEventListener('scroll', handleScroll)
-    }, [])
-
     return (
-        <header className="hero-section" ref={heroRef}>
-            <div className="hero-content">
-                <div className="profile-img">
-                    <img src="/profile.jpg" alt="Sundara Madhu Ram" />
+        <section className="hero-section" id="home">
+            <div className="hero-grid">
+                <div className="hero-left">
+                    <span className="hero-eyebrow">Engineered for Intelligence</span>
+                    <h1 className="hero-name">
+                        Sundara Madhu <span className="accent">Ram</span>
+                    </h1>
+                    <p className="hero-subtitle">
+                        {displayText}<span className="typing-cursor">|</span>
+                        <br />
+                        Architecting data-driven solutions and neural architectures for the next generation of computing.
+                    </p>
+                    <div className="hero-actions">
+                        <a href="#projects" className="btn-primary">View Work</a>
+                        <a href="#contact" className="btn-outline">Get in Touch</a>
+                    </div>
                 </div>
-                <h1 className="hero-name">Sundara Madhu Ram</h1>
-                <div className="typing-text">
-                    {displayText}<span className="cursor"></span>
+                <div className="hero-image-wrapper">
+                    <img src="https://drive.google.com/uc?export=view&id=1Oh6kxZLhL0lwR8apqR4sGfiHZPbr14J-" alt="Sundara Madhu Ram" />
+                    <div className="hero-image-overlay"></div>
                 </div>
             </div>
-            <div className="scroll-indicator">
-                <i className="fas fa-chevron-down" style={{ fontSize: '2em', color: '#667eea' }}></i>
-            </div>
-        </header>
+            <style>{`
+                .typing-cursor {
+                    display: inline-block;
+                    color: #4cd6ff;
+                    animation: blink 0.7s infinite;
+                    font-weight: 300;
+                }
+                @keyframes blink {
+                    0%, 50% { opacity: 1; }
+                    51%, 100% { opacity: 0; }
+                }
+            `}</style>
+        </section>
     )
 }

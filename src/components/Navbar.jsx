@@ -14,7 +14,7 @@ export default function Navbar() {
 
     return (
         <nav className="navbar">
-            <div className="nav-logo">SMR</div>
+            <div className="nav-logo">CSE Portfolio</div>
             <button
                 className="hamburger"
                 onClick={() => setMenuOpen(!menuOpen)}
@@ -25,14 +25,22 @@ export default function Navbar() {
                 <span></span>
             </button>
             <div className={`nav-links ${menuOpen ? 'open' : ''}`}>
+                <a href="#home" onClick={(e) => handleNavClick(e, '#home')}>Home</a>
                 <a href="#about" onClick={(e) => handleNavClick(e, '#about')}>About</a>
                 <a href="#education" onClick={(e) => handleNavClick(e, '#education')}>Education</a>
                 <a href="#skills" onClick={(e) => handleNavClick(e, '#skills')}>Skills</a>
                 <a href="#projects" onClick={(e) => handleNavClick(e, '#projects')}>Projects</a>
                 <a href="#certifications" onClick={(e) => handleNavClick(e, '#certifications')}>Certifications</a>
-                <a href="#achievements" onClick={(e) => handleNavClick(e, '#achievements')}>Achievements</a>
                 <a href="#contact" onClick={(e) => handleNavClick(e, '#contact')}>Contact</a>
             </div>
+            <a
+                href="https://drive.google.com/file/d/1LbwlxX-ogcwQ-x95nKoa3gXx_T1oM7W0/view?usp=sharing"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="nav-resume-btn"
+            >
+                Resume
+            </a>
         </nav>
     )
 }

@@ -1,45 +1,44 @@
 export default function Skills() {
-    const technicalSkills = [
-        { emoji: '🔤', name: 'C' },
-        { emoji: '🐍', name: 'Python' },
-        { emoji: '☕', name: 'Java' },
-        { emoji: '🗃️', name: 'SQL' },
-        { emoji: '🧮', name: 'DSA (Intermediate)' },
-        { emoji: '🧠', name: 'Neural Networks' },
-        { emoji: '🤖', name: 'Machine Learning' },
-        { emoji: '🐙', name: 'GitHub' },
-        { emoji: '🛢️', name: 'MySQL' },
-        { emoji: '📓', name: 'Jupyter Notebook' },
-        { emoji: '💻', name: 'VS Code' },
-    ]
-
-    const softSkills = [
-        { emoji: '🗣️', name: 'Communication' },
-        { emoji: '🎤', name: 'Public Speaking' },
-        { emoji: '⚡', name: 'Quick Learner' },
-        { emoji: '🔄', name: 'Adaptability' },
-    ]
+    const programming = ['Python', 'Java', 'C Language', 'SQL']
+    const aiml = ['Machine Learning', 'Neural Networks', 'Data Structures', 'Algorithms']
+    const tools = ['MySQL', 'GitHub', 'Jupyter Notebook', 'VS Code', 'TensorFlow', 'OpenCV']
+    const soft = ['Problem Solving', 'Team Collaboration', 'Adaptability', 'Quick Learner']
 
     return (
-        <section className="section" id="skills">
-            <h2 className="section-title">Skills & Expertise</h2>
-
-            <div className="skills-container">
-                <div className="skills-category-title">🛠️ Technical Skills</div>
-                {technicalSkills.map((skill, i) => (
-                    <div className="skill-tag" key={i}>
-                        {skill.emoji} {skill.name}
-                    </div>
-                ))}
+        <section className="skills-section-bg" id="skills">
+            <div style={{ textAlign: 'center', marginBottom: '48px' }}>
+                <h2 style={{ fontFamily: "'Space Grotesk', sans-serif", fontSize: '2.2em', fontWeight: 700, marginBottom: '8px' }}>
+                    Technical Arsenal
+                </h2>
+                <p style={{ fontSize: '0.7em', color: 'var(--tertiary)', letterSpacing: '0.2em', textTransform: 'uppercase' }}>
+                    Expertise &amp; Proficiencies
+                </p>
             </div>
-
-            <div className="skills-container">
-                <div className="skills-category-title">🌟 Soft Skills</div>
-                {softSkills.map((skill, i) => (
-                    <div className="skill-tag" key={i}>
-                        {skill.emoji} {skill.name}
+            <div className="skills-grid">
+                <div>
+                    <div className="skills-category-title">⌨ Programming</div>
+                    <div className="skills-tags">
+                        {programming.map((s, i) => <span className="skill-chip" key={i}>{s}</span>)}
                     </div>
-                ))}
+                </div>
+                <div>
+                    <div className="skills-category-title">🧠 Core AI/ML</div>
+                    <div className="skills-tags">
+                        {aiml.map((s, i) => <span className="skill-chip" key={i}>{s}</span>)}
+                    </div>
+                </div>
+                <div>
+                    <div className="skills-category-title">🛠 Tools &amp; Frameworks</div>
+                    <div className="skills-tags">
+                        {tools.map((s, i) => <span className="skill-chip" key={i}>{s}</span>)}
+                    </div>
+                </div>
+                <div>
+                    <div className="skills-category-title">✨ Soft Skills</div>
+                    <div className="skills-tags">
+                        {soft.map((s, i) => <span className="skill-chip" key={i}>{s}</span>)}
+                    </div>
+                </div>
             </div>
         </section>
     )
