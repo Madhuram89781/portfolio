@@ -66,7 +66,7 @@ export default function Hero() {
                     </div>
                 </div>
                 <div className="hero-image-wrapper">
-                    <img src="https://drive.google.com/uc?export=view&id=1Oh6kxZLhL0lwR8apqR4sGfiHZPbr14J-" alt="Sundara Madhu Ram" />
+                    <img src="/profile.jpg" alt="Sundara Madhu Ram" />
                     <div className="hero-image-overlay"></div>
                 </div>
             </div>
