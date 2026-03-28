@@ -14,7 +14,7 @@ export default function Navbar() {
 
     return (
         <nav className="navbar">
-            <div className="nav-logo">CSE Portfolio</div>
+            <div className="nav-logo">Portfolio</div>
             <button
                 className="hamburger"
                 onClick={() => setMenuOpen(!menuOpen)}
