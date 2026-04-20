@@ -32,7 +32,7 @@ export default function Projects() {
                             ↗ Visit Website
                         </a>
                         <a href="https://github.com/Madhuram89781/ecoglow" target="_blank" rel="noopener noreferrer" className="project-link">
-                            ⌄ View Source
+                            ⌄ View on GitHub
                         </a>
                     </div>
                 </div>
