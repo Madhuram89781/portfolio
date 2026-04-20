@@ -54,6 +54,9 @@ export default function Projects() {
                         <span className="tech-badge">MediaPipe</span>
                         <span className="tech-badge">Deep Learning</span>
                     </div>
+                    <a href="https://github.com/Madhuram89781/face-anti-spooring-system" target="_blank" rel="noopener noreferrer" className="project-link">
+                        ⌄ View on GitHub
+                    </a>
                 </div>
 
                 {/* Twitter Emotion Detection - Wide */}
