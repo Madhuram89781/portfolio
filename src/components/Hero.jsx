@@ -81,6 +81,18 @@ export default function Hero() {
                     0%, 50% { opacity: 1; }
                     51%, 100% { opacity: 0; }
                 }
+                .hero-eyebrow {
+                    animation: heroSlideIn 0.8s cubic-bezier(0.16, 1, 0.3, 1) 0.1s both;
+                }
+                .hero-name {
+                    animation: heroSlideIn 0.9s cubic-bezier(0.16, 1, 0.3, 1) 0.25s both;
+                }
+                .hero-subtitle {
+                    animation: heroSlideIn 1s cubic-bezier(0.16, 1, 0.3, 1) 0.4s both;
+                }
+                .hero-actions {
+                    animation: heroSlideIn 1.1s cubic-bezier(0.16, 1, 0.3, 1) 0.55s both;
+                }
             `}</style>
         </section>
     )

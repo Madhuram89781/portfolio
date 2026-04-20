@@ -1,6 +1,9 @@
+import ScrollReveal from './ScrollReveal'
+
 export default function Achievements() {
     return (
         <div className="achieve-coding-grid" id="achievements">
+            <ScrollReveal>
             <div>
                 <div className="achieve-title">Key Achievements</div>
                 <div className="achieve-list">
@@ -36,6 +39,8 @@ export default function Achievements() {
                     </div>
                 </div>
             </div>
+            </ScrollReveal>
+            <ScrollReveal delay={200}>
             <div className="coding-profiles-box">
                 <div className="coding-profiles-title">Coding Profiles</div>
                 <div className="profiles-grid">
@@ -69,6 +74,7 @@ export default function Achievements() {
                     </a>
                 </div>
             </div>
+            </ScrollReveal>
         </div>
     )
 }

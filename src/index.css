@@ -189,6 +189,26 @@ body {
     justify-content: center;
     padding: 96px 80px 60px;
     position: relative;
+    overflow: hidden;
+}
+
+/* Hero entrance animations */
+.hero-left {
+    animation: heroSlideIn 1s cubic-bezier(0.16, 1, 0.3, 1) both;
+}
+
+.hero-image-wrapper {
+    animation: heroFadeScale 1.2s cubic-bezier(0.16, 1, 0.3, 1) 0.3s both;
+}
+
+@keyframes heroSlideIn {
+    from { opacity: 0; transform: translateY(40px); }
+    to { opacity: 1; transform: translateY(0); }
+}
+
+@keyframes heroFadeScale {
+    from { opacity: 0; transform: scale(0.85); }
+    to { opacity: 1; transform: scale(1); }
 }
 
 .hero-grid {
@@ -249,11 +269,6 @@ body {
     text-transform: uppercase;
     letter-spacing: 0.1em;
     text-decoration: none;
-    transition: opacity 0.2s;
-}
-
-.btn-primary:hover {
-    opacity: 0.88;
 }
 
 .btn-outline {
@@ -266,7 +281,6 @@ body {
     text-transform: uppercase;
     letter-spacing: 0.1em;
     text-decoration: none;
-    transition: background-color 0.2s;
 }
 
 .btn-outline:hover {
@@ -880,6 +894,244 @@ body {
 
 .footer-links a:hover {
     color: var(--tertiary);
+}
+
+/* ===== Scroll Reveal Animations ===== */
+.reveal-up {
+    opacity: 0;
+    transform: translateY(40px);
+    transition: opacity 0.7s cubic-bezier(0.16, 1, 0.3, 1), transform 0.7s cubic-bezier(0.16, 1, 0.3, 1);
+}
+
+.reveal-up.reveal.revealed {
+    opacity: 1;
+    transform: translateY(0);
+}
+
+.reveal-left {
+    opacity: 0;
+    transform: translateX(-40px);
+    transition: opacity 0.7s cubic-bezier(0.16, 1, 0.3, 1), transform 0.7s cubic-bezier(0.16, 1, 0.3, 1);
+}
+
+.reveal-left.reveal.revealed {
+    opacity: 1;
+    transform: translateX(0);
+}
+
+.reveal-right {
+    opacity: 0;
+    transform: translateX(40px);
+    transition: opacity 0.7s cubic-bezier(0.16, 1, 0.3, 1), transform 0.7s cubic-bezier(0.16, 1, 0.3, 1);
+}
+
+.reveal-right.reveal.revealed {
+    opacity: 1;
+    transform: translateX(0);
+}
+
+/* ===== Enhanced Hover Effects ===== */
+
+/* Buttons */
+.btn-primary {
+    position: relative;
+    overflow: hidden;
+    transition: opacity 0.2s, transform 0.25s, box-shadow 0.3s;
+}
+
+.btn-primary:hover {
+    opacity: 1;
+    transform: translateY(-2px);
+    box-shadow: 0 6px 24px rgba(76, 214, 255, 0.25);
+}
+
+.btn-outline {
+    transition: background-color 0.2s, transform 0.25s, border-color 0.3s;
+}
+
+.btn-outline:hover {
+    transform: translateY(-2px);
+    border-color: var(--primary);
+}
+
+/* Nav link underline effect */
+.nav-links a {
+    position: relative;
+}
+
+.nav-links a::after {
+    content: '';
+    position: absolute;
+    bottom: -4px;
+    left: 0;
+    width: 0%;
+    height: 1px;
+    background: var(--primary);
+    transition: width 0.3s ease;
+}
+
+.nav-links a:hover::after {
+    width: 100%;
+}
+
+/* Card lift effects */
+.project-card {
+    transition: background-color 0.3s, transform 0.35s cubic-bezier(0.16, 1, 0.3, 1), box-shadow 0.35s;
+}
+
+.project-card:hover {
+    transform: translateY(-4px);
+    box-shadow: 0 12px 40px rgba(0, 0, 0, 0.25);
+}
+
+.stat-card {
+    transition: transform 0.3s, box-shadow 0.3s;
+}
+
+.stat-card:hover {
+    transform: translateY(-3px);
+    box-shadow: 0 8px 30px rgba(0, 0, 0, 0.2);
+}
+
+.edu-card-main, .edu-card-lower {
+    transition: transform 0.3s, box-shadow 0.3s;
+}
+
+.edu-card-main:hover, .edu-card-lower:hover {
+    transform: translateY(-3px);
+    box-shadow: 0 8px 30px rgba(0, 0, 0, 0.2);
+}
+
+.cert-card {
+    transition: border-color 0.3s, transform 0.3s, box-shadow 0.3s;
+}
+
+.cert-card:hover {
+    transform: translateY(-4px);
+    box-shadow: 0 8px 30px rgba(76, 214, 255, 0.1);
+}
+
+.achieve-item {
+    transition: transform 0.3s, box-shadow 0.3s;
+}
+
+.achieve-item:hover {
+    transform: translateX(6px);
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.15);
+}
+
+/* Skill chip hover */
+.skill-chip {
+    transition: background-color 0.25s, color 0.25s, transform 0.25s;
+}
+
+.skill-chip:hover {
+    background: rgba(76, 214, 255, 0.15);
+    color: var(--primary);
+    transform: translateY(-2px);
+}
+
+/* Tech badge hover */
+.tech-badge {
+    transition: background-color 0.25s, border-color 0.25s, transform 0.2s;
+}
+
+.tech-badge:hover {
+    background: rgba(76, 214, 255, 0.12);
+    border-color: var(--primary);
+    transform: scale(1.05);
+}
+
+/* Profile button hover */
+.profile-btn {
+    transition: background-color 0.2s, transform 0.3s;
+}
+
+.profile-btn:hover {
+    transform: translateY(-3px) scale(1.05);
+}
+
+/* Contact card hover */
+.contact-card {
+    transition: transform 0.3s, box-shadow 0.3s;
+}
+
+.contact-card:hover {
+    transform: translateY(-3px);
+    box-shadow: 0 8px 24px rgba(0, 0, 0, 0.2);
+}
+
+/* Hero image glow pulse */
+.hero-image-wrapper::after {
+    content: '';
+    position: absolute;
+    inset: -4px;
+    border-radius: inherit;
+    background: linear-gradient(135deg, rgba(76, 214, 255, 0.2), rgba(79, 219, 200, 0.15));
+    z-index: -1;
+    opacity: 0;
+    animation: glowPulse 3s ease-in-out infinite;
+}
+
+@keyframes glowPulse {
+    0%, 100% { opacity: 0.3; transform: scale(1); }
+    50% { opacity: 0.7; transform: scale(1.02); }
+}
+
+/* Section divider grow */
+.section-divider {
+    transform: scaleX(0);
+    transform-origin: left;
+    transition: transform 0.8s cubic-bezier(0.16, 1, 0.3, 1);
+}
+
+.reveal.revealed .section-divider {
+    transform: scaleX(1);
+}
+
+/* Project link arrow animation */
+.project-link {
+    transition: opacity 0.2s, gap 0.3s;
+}
+
+.project-link:hover {
+    gap: 10px;
+}
+
+/* Footer link hover */
+.footer-links a {
+    transition: color 0.2s, transform 0.2s;
+}
+
+.footer-links a:hover {
+    transform: translateY(-1px);
+}
+
+/* Navbar scroll shadow */
+.navbar {
+    transition: box-shadow 0.3s, background 0.3s;
+}
+
+/* Resume button shine effect */
+.nav-resume-btn {
+    position: relative;
+    overflow: hidden;
+}
+
+.nav-resume-btn::after {
+    content: '';
+    position: absolute;
+    top: -50%;
+    left: -60%;
+    width: 30%;
+    height: 200%;
+    background: rgba(255, 255, 255, 0.15);
+    transform: rotate(25deg);
+    transition: left 0.5s;
+}
+
+.nav-resume-btn:hover::after {
+    left: 120%;
 }
 
 /* ===== Responsive ===== */

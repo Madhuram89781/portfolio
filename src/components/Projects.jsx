@@ -1,17 +1,22 @@
+import ScrollReveal from './ScrollReveal'
+
 export default function Projects() {
     return (
         <section className="section" id="projects">
-            <div className="projects-header">
-                <div>
-                    <h2 className="section-title">Featured Projects</h2>
-                    <p style={{ color: 'var(--on-surface-variant)', fontSize: '0.9em', marginTop: '8px' }}>
-                        Selected engineering works and research implementations
-                    </p>
+            <ScrollReveal>
+                <div className="projects-header">
+                    <div>
+                        <h2 className="section-title">Featured Projects</h2>
+                        <p style={{ color: 'var(--on-surface-variant)', fontSize: '0.9em', marginTop: '8px' }}>
+                            Selected engineering works and research implementations
+                        </p>
+                    </div>
                 </div>
-            </div>
+            </ScrollReveal>
 
             <div className="projects-grid">
                 {/* EcoGlow */}
+                <ScrollReveal delay={100}>
                 <div className="project-card cyan-deco">
                     <div className="project-card-deco"></div>
                     <span className="project-tag">Sustainability + Tech</span>
@@ -36,8 +41,10 @@ export default function Projects() {
                         </a>
                     </div>
                 </div>
+                </ScrollReveal>
 
                 {/* Face Anti-Spoofing */}
+                <ScrollReveal delay={250}>
                 <div className="project-card teal-deco">
                     <div className="project-card-deco"></div>
                     <span className="project-tag">Computer Vision</span>
@@ -58,8 +65,10 @@ export default function Projects() {
                         ⌄ View on GitHub
                     </a>
                 </div>
+                </ScrollReveal>
 
                 {/* Twitter Emotion Detection - Wide */}
+                <ScrollReveal delay={400}>
                 <div className="project-card wide">
                     <div className="project-wide-inner">
                         <div>
@@ -94,6 +103,7 @@ export default function Projects() {
                         </div>
                     </div>
                 </div>
+                </ScrollReveal>
             </div>
         </section>
     )

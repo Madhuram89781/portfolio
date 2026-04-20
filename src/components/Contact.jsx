@@ -1,6 +1,9 @@
+import ScrollReveal from './ScrollReveal'
+
 export default function Contact() {
     return (
         <section className="contact-section" id="contact">
+            <ScrollReveal>
             <div className="contact-inner">
                 <h2 className="contact-title">Let&apos;s Connect</h2>
                 <p className="contact-subtitle">
@@ -21,6 +24,7 @@ export default function Contact() {
                     Available for internships &amp; collaborations 2024–2025
                 </div>
             </div>
+            </ScrollReveal>
         </section>
     )
 }
