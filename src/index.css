@@ -886,9 +886,21 @@ body {
 @media (max-width: 1024px) {
     .hero-grid {
         grid-template-columns: 1fr;
+        justify-items: center;
+        text-align: center;
     }
     .hero-image-wrapper {
-        display: none;
+        display: block;
+        width: 220px;
+        height: 220px;
+        border-radius: 50%;
+        order: -1;
+    }
+    .hero-image-wrapper img {
+        border-radius: 50%;
+    }
+    .hero-actions {
+        justify-content: center;
     }
     .about-bento {
         grid-template-columns: 1fr;
