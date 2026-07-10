@@ -34,7 +34,7 @@ export default function Navbar() {
                 <a href="#contact" onClick={(e) => handleNavClick(e, '#contact')}>Contact</a>
             </div>
             <a
-                href="https://drive.google.com/file/d/1LbwlxX-ogcwQ-x95nKoa3gXx_T1oM7W0/view?usp=sharing"
+                href="https://drive.google.com/file/d/1EtdtxaaflajlH0uDL9t9AllfnWBGKvZW/view?usp=drive_link"
                 target="_blank"
                 rel="noopener noreferrer"
                 className="nav-resume-btn"
