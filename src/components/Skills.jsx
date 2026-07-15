@@ -1,16 +1,16 @@
 import ScrollReveal from './ScrollReveal'
 
 export default function Skills() {
-    const programming = ['Python', 'Java', 'C Language', 'SQL']
-    const aiml = ['Machine Learning', 'Neural Networks', 'Data Structures', 'Algorithms']
-    const tools = ['MySQL', 'GitHub', 'Jupyter Notebook', 'VS Code', 'TensorFlow', 'OpenCV']
-    const soft = ['Problem Solving', 'Team Collaboration', 'Adaptability', 'Quick Learner']
+    const programming = ['C', 'Python', 'Java', 'SQL', 'JavaScript', 'HTML', 'CSS']
+    const concepts = ['Data Structures & Algorithms', 'Probability & Statistics', 'Linear Algebra', 'Neural Networks', 'Machine Learning', 'NLP', 'Computer Vision', 'Deep Learning']
+    const libraries = ['TensorFlow', 'Keras', 'OpenCV', 'NumPy', 'Pandas', 'Scikit-learn']
+    const tools = ['GitHub', 'MySQL', 'Jupyter Notebook', 'VS Code', 'Docker']
 
     const categories = [
-        { icon: '⌨', title: 'Programming', items: programming },
-        { icon: '🧠', title: 'Core AI/ML', items: aiml },
-        { icon: '🛠', title: 'Tools & Frameworks', items: tools },
-        { icon: '✨', title: 'Soft Skills', items: soft },
+        { icon: '⌨', title: 'Languages', items: programming },
+        { icon: '🧠', title: 'AI/ML & CS Concepts', items: concepts },
+        { icon: '📚', title: 'Libraries & Frameworks', items: libraries },
+        { icon: '🛠', title: 'Tools & Platforms', items: tools },
     ]
 
     return (

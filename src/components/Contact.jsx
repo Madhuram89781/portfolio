@@ -21,7 +21,7 @@ export default function Contact() {
                     </div>
                 </div>
                 <div className="contact-availability">
-                    Available for internships &amp; collaborations 2024–2025
+                    Available for full-time opportunities &amp; collaborations
                 </div>
             </div>
             </ScrollReveal>

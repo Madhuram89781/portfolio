@@ -12,8 +12,7 @@ export default function Achievements() {
                         <div>
                             <div className="achieve-item-title">Competitive Programmer</div>
                             <div className="achieve-item-desc">
-                                Solved over 600+ complex algorithmic problems across LeetCode, GFG, and CodeChef.
-                                LeetCode 150+ | GFG 200+ | CodeChef 250+
+                                Solved over 1000+ complex algorithmic problems across CodeChef, LeetCode, and GeeksforGeeks.
                             </div>
                         </div>
                     </div>
@@ -32,7 +31,7 @@ export default function Achievements() {
                         <div>
                             <div className="achieve-item-title">Academic Excellence</div>
                             <div className="achieve-item-desc">
-                                Maintaining 8.37 CGPA at CMR College of Engineering &amp; Technology (2023–2027).
+                                Maintaining 8.34 CGPA at CMR College of Engineering &amp; Technology (2023–2027).
                                 Scored 96.3% in Intermediate and 96.6% in SSC examinations.
                             </div>
                         </div>

@@ -17,7 +17,7 @@ export default function Education() {
                             <div className="edu-degree">B.Tech in Computer Science Engineering</div>
                             <div className="edu-institution">CMR College of Engineering &amp; Technology</div>
                         </div>
-                        <div className="edu-grade">8.37 CGPA</div>
+                        <div className="edu-grade">8.34 CGPA</div>
                     </div>
                 </ScrollReveal>
                 <div className="edu-lower-grid">

@@ -29,11 +29,11 @@ export default function About() {
                 <ScrollReveal delay={300}>
                     <div className="about-stats">
                         <div className="stat-card teal">
-                            <div className="stat-value">600+</div>
+                            <div className="stat-value">1000+</div>
                             <div className="stat-label">Problems Solved</div>
                         </div>
                         <div className="stat-card cyan">
-                            <div className="stat-value">8.37</div>
+                            <div className="stat-value">8.34</div>
                             <div className="stat-label">Current CGPA</div>
                         </div>
                     </div>

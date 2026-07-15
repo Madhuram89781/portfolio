@@ -2,7 +2,7 @@ export default function Footer() {
     return (
         <footer className="footer">
             <div className="footer-copy">
-                © 2025 Engineered Portfolio | B.Tech CSE
+                © 2026 Engineered Portfolio | B.Tech CSE
             </div>
             <div className="footer-links">
                 <a href="https://github.com/Madhuram89781" target="_blank" rel="noopener noreferrer">GitHub</a>

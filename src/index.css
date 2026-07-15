@@ -658,12 +658,20 @@ body {
     background: var(--surface-container);
     text-align: center;
     border-bottom: 2px solid transparent;
-    transition: border-color 0.3s;
+    transition: border-color 0.3s, background-color 0.3s;
     cursor: default;
 }
 
 .cert-card:hover {
     border-color: var(--primary);
+}
+
+.cert-card.clickable {
+    cursor: pointer;
+}
+
+.cert-card.clickable:hover {
+    background: var(--surface-high);
 }
 
 .cert-icon {
@@ -1003,7 +1011,7 @@ body {
 }
 
 .cert-card {
-    transition: border-color 0.3s, transform 0.3s, box-shadow 0.3s;
+    transition: border-color 0.3s, background-color 0.3s, transform 0.3s, box-shadow 0.3s;
 }
 
 .cert-card:hover {
@@ -1134,6 +1142,188 @@ body {
     left: 120%;
 }
 
+/* ===== Experience ===== */
+.experience-wrapper {
+    display: flex;
+    flex-direction: column;
+    gap: 32px;
+}
+
+.experience-company-card {
+    padding: 32px;
+    background: var(--surface-container);
+    border-radius: 2px;
+    border-left: 3px solid var(--primary);
+}
+
+.company-logo-container {
+    display: flex;
+    gap: 12px;
+    flex-wrap: wrap;
+    margin-bottom: 16px;
+}
+
+.company-badge-partner {
+    background: rgba(79, 219, 200, 0.1);
+    color: var(--tertiary);
+    font-size: 0.65em;
+    font-weight: 700;
+    text-transform: uppercase;
+    letter-spacing: 0.1em;
+    padding: 4px 10px;
+    border-radius: 2px;
+}
+
+.company-badge-supporter {
+    background: rgba(76, 214, 255, 0.1);
+    color: var(--primary);
+    font-size: 0.65em;
+    font-weight: 700;
+    text-transform: uppercase;
+    letter-spacing: 0.1em;
+    padding: 4px 10px;
+    border-radius: 2px;
+}
+
+.company-title {
+    font-family: 'Space Grotesk', sans-serif;
+    font-size: 1.4em;
+    font-weight: 700;
+    color: #ffffff;
+    margin-bottom: 12px;
+}
+
+.company-summary {
+    font-size: 0.9em;
+    color: var(--on-surface-variant);
+    line-height: 1.7;
+}
+
+.tracks-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 32px;
+}
+
+.track-card {
+    padding: 32px;
+    background: var(--surface-low);
+    border-radius: 2px;
+    display: flex;
+    flex-direction: column;
+    position: relative;
+    border: 1px solid rgba(64, 71, 81, 0.2);
+}
+
+.track-card.cyan-accent {
+    border-top: 3px solid var(--primary);
+}
+
+.track-card.teal-accent {
+    border-top: 3px solid var(--tertiary);
+}
+
+.track-card-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 16px;
+}
+
+.track-tag {
+    font-size: 0.6em;
+    color: var(--on-surface-variant);
+    letter-spacing: 0.15em;
+    text-transform: uppercase;
+    font-weight: 700;
+}
+
+.track-duration {
+    font-size: 0.7em;
+    color: #64748b;
+}
+
+.track-name {
+    font-family: 'Space Grotesk', sans-serif;
+    font-size: 1.25em;
+    font-weight: 700;
+    color: #ffffff;
+    margin-bottom: 12px;
+}
+
+.track-desc {
+    font-size: 0.85em;
+    color: var(--on-surface-variant);
+    line-height: 1.6;
+    margin-bottom: 24px;
+}
+
+.achievement-badge {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    background: var(--surface-container);
+    padding: 12px 16px;
+    border-radius: 2px;
+    margin-bottom: 24px;
+    border: 1px solid rgba(76, 214, 255, 0.05);
+}
+
+.badge-icon {
+    font-size: 1.5em;
+}
+
+.badge-label {
+    font-size: 0.6em;
+    color: #64748b;
+    text-transform: uppercase;
+    letter-spacing: 0.1em;
+}
+
+.badge-value {
+    font-family: 'Space Grotesk', sans-serif;
+    font-weight: 700;
+    font-size: 0.95em;
+    color: var(--primary);
+}
+
+.track-highlights {
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+    margin-top: auto;
+}
+
+.highlight-item {
+    display: flex;
+    gap: 8px;
+    font-size: 0.8em;
+    color: var(--on-surface-variant);
+    line-height: 1.5;
+}
+
+.highlight-dot {
+    color: var(--tertiary);
+}
+
+.track-link {
+    display: inline-flex;
+    align-items: center;
+    gap: 6px;
+    font-size: 0.75em;
+    color: var(--primary);
+    text-decoration: none;
+    font-weight: 600;
+    margin-top: 24px;
+    transition: color 0.25s, opacity 0.25s;
+    width: fit-content;
+}
+
+.track-link:hover {
+    color: var(--tertiary);
+    opacity: 0.85;
+}
+
 /* ===== Responsive ===== */
 @media (max-width: 1024px) {
     .hero-grid {
@@ -1182,6 +1372,9 @@ body {
         padding: 0 40px 60px;
     }
     .edu-lower-grid {
+        grid-template-columns: 1fr;
+    }
+    .tracks-grid {
         grid-template-columns: 1fr;
     }
 }
